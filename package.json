@@ -2,6 +2,9 @@
   "name": "my-plugin",
   "version": "1.0.0", 
   "main": "extension.js",
+  "engines":{
+    "vscode": "^1.60.0"
+  },
   "contributes": {
     "commands": [{
       "command": "myplugin.hello",
