@@ -1,12 +1,16 @@
 exports.activate = function(context) {
+    const vscode = require('vscode');
+
     context.subscriptions.push(
-        require('vscode').commands.registerCommand('myplugin.hello', function() {
-            let editor = require('vscode').window.activeTextEditor;
+        vscode.commands.registerCommand('myplugin.hello', function() {
+            const editor = vscode.window.activeTextEditor;
             if (editor) {
-                editor.edit(function(e) {
-                    e.insert(editor.selection.active, "hello ");
+                editor.edit(e => {
+                    e.insert(editor.selection.active, "Hello! ");
                 });
             }
         })
     );
 };
+
+exports.deactivate = function() {};
