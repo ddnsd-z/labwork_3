@@ -1,0 +1,11 @@
+{
+  "name": "my-plugin",
+  "version": "1.0.0", 
+  "main": "extension.js",
+  "contributes": {
+    "commands": [{
+      "command": "myplugin.hello",
+      "title": "Say Hello"
+    }]
+  }
+}
